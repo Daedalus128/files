@@ -15,9 +15,9 @@ int main( )
 ofstream out{"abc.bin"};
 if(out)
 {
-out.write ( reinterpret cast <char*>(&a), sizeof(a));
-out.write ( reinterpret cast <char*>(&b), sizeof(b));
-out.write ( reinterpret cast <char*>(&c), sizeof(c));
+out.write ( reinterpret_cast <char*>(&a), sizeof(a));
+out.write ( reinterpret_cast <char*>(&b), sizeof(b));
+out.write ( reinterpret_cast <char*>(&c), sizeof(c));
 }
 else
 {
