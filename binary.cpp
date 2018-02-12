@@ -15,13 +15,13 @@ int main( )
 ofstream out{"abc.bin"};
 if(out)
 {
-out << a << endl;
-out << b << endl;
-out << c << endl;
+out.write ( reinterpret cast <char*>(&a), sizeof(a));
+out.write ( reinterpret cast <char*>(&b), sizeof(b));
+out.write ( reinterpret cast <char*>(&c), sizeof(c));
 }
 else
 {
-cout << " could not read" ;
+cout << " could not write to file" ;
 }
  
    return 0;
